@@ -16,7 +16,6 @@ const Featured = () => {
       setIndex(index !== 2 ? index + 1 : 0);
     }
   };
-  console.log(index);
   return (
     <div className={styles.container}>
       <div
@@ -31,8 +30,8 @@ const Featured = () => {
         style={{ transform: `translateX(${-100 * index}vw) ` }}
       >
         {images.map((img, i) => (
-          <div className={styles.imgContainer}>
-            <Image src={img} key={i} layout="fill" />
+          <div className={styles.imgContainer} key={i}>
+            <Image src={img} layout="fill" />
           </div>
         ))}
       </div>
